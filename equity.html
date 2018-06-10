@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GOTHEMRIGHT!-Equity</title>
+	<link rel="stylesheet" href="font/css/font-awesome.min.css">
+	<style>
+		*{margin: 0;padding: 0;}
+		/*body{background: url('img/back3.jpg') no-repeat center;background-size: cover;}*/
+		body{
+			background-color: #FFF7D5;
+			position: relative;
+		}
+		header{height: 60px;width: 100%;background: rgb(39,23,111)}
+		header ul{width: 100%;height: 60px;flex-direction: row;display: flex;justify-content: center;}
+		header ul li{height: 60px;list-style: none;padding: 0 26px;}
+		header ul li a{display: inline-block; height: 60px;width: 100%;color: #fff;font-size: 18px;text-align: center;text-decoration: none;line-height: 60px;}
+		header ul li a i{margin: 10px;}
+		header ul li:hover{background: rgba(0,0,0,0.5);cursor: pointer;}
+		footer{
+            		height:60px;
+            		line-height: 60px;
+            		background: rgba(0,0,0,0.5);
+            		color: white;
+            		width:100%;
+			float: left;
+			margin-top: 50px;
+			text-align: center;
+		}
+		.EQUITY span{
+			font-size: 40px;
+			border-bottom: 2px solid black;
+			font-weight: 700;
+		}
+		#mybody{position: relative;min-height: 500px;  width: 100%;box-sizing: border-box;}
+		.tab{
+			width:202px;
+			position: absolute;
+			top:0;
+			left:35%;
+			z-index: 1000;
+			display: none;
+		}
+		.tab>ul{
+			z-index: 1000;
+			color: white;
+		}
+		.tab>ul li{
+			width:200px;
+			list-style: none;
+			height: 35px;
+			line-height: 35px;
+			text-align: center;
+			border: 1px solid white;
+			z-index: 1000;
+			background-color:black;
+
+		}
+		.content{
+			width:100%;
+			padding-top: 30px;
+			float: left;
+		}
+		.content>div{
+			width:50%;
+			height:300px;
+			float: left;
+		}
+		.contentLeft>div{
+			display: none;
+		}
+		.active{
+			color: blue;
+		}
+        	footer span{margin-left: 20px;}
+
+		.title{
+			padding-left: 20px;
+			line-height: 100px;
+			font-size: 30px;
+		}
+		.text{
+			padding:0 20px;
+			font-size: 20px;
+		}
+		.contentRight{
+			text-align: center;
+		}
+		.contentRight video{
+			margin-top: 30px;
+		}
+		#fullScreenBtn{
+			background-color:white;
+			border:0;
+			padding: 7px;
+			color: grey;
+		}
+		#videobox{
+			position: relative;
+		}
+		#fullScreenBtn{
+			position: absolute;
+			bottom: 5px;
+			right:163px;
+		}
+		video{
+			margin-right: 50px;
+		}
+		#mybody h1{color: #fff;text-align: center;padding: 25px auto;text-shadow: 0 0 20px #000;font-size: 60px;margin-top: -400px;font-family: SimHei}
+		.tabDiv p{text-shadow: 0 5px 10px #fff}
+		.contentLeft>div{
+			margin-left: 150px;
+		}
+		.imgDiv{
+			width:100%;
+			height:500px;
+			float: left;
+			overflow: hidden;
+		}
+		.imgDiv img{
+			width:100%;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<ul>
+			<li><a href="home.html"><i class="fa fa-university" aria-hidden="true"></i>Home</a></li>
+			<li><a href="index.html"><i class="fa fa-line-chart" aria-hidden="true"></i>Index</a></li>
+			<li id="Equity"><a href="equity.html"><i class="fa fa-usd" aria-hidden="true"></i>Equity</a></li>
+			<li><a href="fixed.html"><i class="fa fa-btc" aria-hidden="true"></i>Fixed</a></li>
+			<li><a href="derivatives.html"><i class="fa fa-ils" aria-hidden="true"></i>Derivatives</a></li>
+			<li><a href="calculator.html"><i class="fa fa-calculator" aria-hidden="true"></i>Calculator</a></li>
+		</ul>
+	</header>
+	<div id="mybody">
+		<div class="imgDiv">
+			<img src="img3/tiger.jpg" alt="">
+			<h1 class="h1">EQUITY SECURITIES</h1>
+		</div>
+		<div class="tab">
+			
+			<ul>
+				<li class="tab-li active">DCF</li>
+				<li class="tab-li">Golden Growth Model</li>
+				<li class="tab-li">Free Cash Flow Model</li>
+				<li class="tab-li">Macroeconomics Metrics</li>
+				<li class="tab-li">Mutiple Stages</li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="contentLeft">
+				<div class="tabDiv" style="display: block;">
+					<p class="title">Discounted Cash Flow</p>
+					<p class="text">Discounted cash flow (DCF) is a valuation method used to estimate the attractiveness of an investment opportunity. 
+					DCF analyses use future free cash flow projections and discounts them, using a required annual rate, to arrive at present value estimates. 
+					A present value estimate is then used to evaluate the potential for investment. If the value arrived at through DCF analysis is higher than 
+					the current cost of the investment, the opportunity may be a good one. 
+					Read more: Discounted Cash Flow (DCF) https://www.investopedia.com/terms/d/dcf.asp#ixzz5GxfUBw9h </p>
+				</div>
+				<div class="tabDiv">
+					<p class="title">Golden Growth Model</p>
+					<p class="text">Please accept my sincere wishes for the New Year. I hope you will continue to enjoy good health.222</p>
+				</div>
+				<div class="tabDiv">
+					<p class="title">Free Cash Flow Model</p>
+					<p class="text">Please accept my sincere wishes for the New Year. I hope you will continue to enjoy good health.333</p>
+				</div>
+				<div class="tabDiv">
+					<p class="title">Macroeconomics Metrics</p>
+					<p class="text">Please accept my sincere wishes for the New Year. I hope you will continue to enjoy good health.444</p>
+				</div>
+				<div class="tabDiv">
+					<p class="title">Mutiple Stages</p>
+					<p class="text">Please accept my sincere wishes for the New Year. I hope you will continue to enjoy good health.555</p>
+				</div>
+			</div>
+			<div class="contentRight" id="videoDiv" >
+				<div id="videobox">
+					<video width="320" height="" controls="controls" preload="preload" id="video" poster="">
+						<source src="" type="video/ogg" />
+						<source src="Bear_movie.mp4" type="video/mp4" />
+						<source src="" type="video/webm" />
+						<object data="" width="100%" height="100%">
+							<embed width="100%" height="100%" src="" />
+						</object>
+
+					</video>
+					<!--<button id="fullScreenBtn">Full</button>-->
+				</div>
+			</div>
+		</div>
+		<footer>
+			<span>Statement: This website is for project use, contact me via zy324@drexel.edu</span>
+            		<span>CS530: Developing User Interfaces &copy; 2018</span>
+		</footer>
+	</div>
+
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+	$(function () {
+		//Option tabs
+		$('.tab-li').click(function () {
+			$('.tab-li').removeClass('active');
+			$('.tabDiv').css('display','none');
+			$(this).addClass('active');
+			$('.tabDiv').eq($(this).index()).css('display','block')
+		})
+	})
+
+	$('#Equity').mouseenter(function () {
+		$('.tab').slideDown()
+	});
+	$('#Equity').mouseleave(function () {
+		$('.tab').hide()
+	});
+	$('.tab').mouseenter(function () {
+		$('.tab').show()
+	});
+	$('.tab').mouseleave(function () {
+		$('.tab').hide()
+	})
+</script>
+<script type="text/javascript">
+
+	var invokeFieldOrMethod = function(element, method)
+	{
+		var usablePrefixMethod;
+		["webkit", "moz", "ms", "o", ""].forEach(function(prefix) {
+			if (usablePrefixMethod) return;
+			if (prefix === "") {
+				method = method.slice(0,1).toLowerCase() + method.slice(1);
+			}
+			var typePrefixMethod = typeof element[prefix + method];
+			if (typePrefixMethod + "" !== "undefined") {
+				if (typePrefixMethod === "function") {
+					usablePrefixMethod = element[prefix + method]();
+				} else {
+					usablePrefixMethod = element[prefix + method];
+				}
+			}
+		});
+
+		return usablePrefixMethod;
+	};
+
+	//into the full screen
+	function launchFullscreen(element)
+	{
+		if(element.requestFullscreen) {
+			element.requestFullscreen();
+		} else if(element.mozRequestFullScreen){
+			element.mozRequestFullScreen();
+		} else if(element.msRequestFullscreen){
+			element.msRequestFullscreen();
+		} else if(element.oRequestFullscreen){
+			element.oRequestFullscreen();
+		} else if(element.webkitRequestFullscreen){
+			element.webkitRequestFullScreen();
+		}else{
+			var docHtml = document.documentElement;
+			var docBody = document.body;
+			var videobox = document.getElementById('videobox');
+			var cssText = 'width:100%;height:100%;overflow:hidden;';
+			docHtml.style.cssText = cssText;
+			docBody.style.cssText = cssText;
+			videobox.style.cssText = cssText+';'+'margin:0px;padding:0px;';
+			document.IsFullScreen = true;
+
+		}
+	}
+	//exit the full screen
+	function exitFullscreen()
+	{
+		if (document.exitFullscreen) {
+			document.exitFullscreen();
+		} else if (document.msExitFullscreen) {
+			document.msExitFullscreen();
+		} else if (document.mozCancelFullScreen) {
+			document.mozCancelFullScreen();
+		} else if(document.oRequestFullscreen){
+			document.oCancelFullScreen();
+		}else if (document.webkitExitFullscreen){
+			document.webkitExitFullscreen();
+		}else{
+			var docHtml = document.documentElement;
+			var docBody = document.body;
+			var videobox = document.getElementById('videobox');
+			docHtml.style.cssText = "";
+			docBody.style.cssText = "";
+			videobox.style.cssText = "";
+			document.IsFullScreen = false;
+		}
+	}
+	document.getElementById('fullScreenBtn').addEventListener('click',function(){
+		launchFullscreen(document.getElementById('video'));
+		window.setTimeout(function exit(){
+	//check the full screen
+			if(invokeFieldOrMethod(document,'FullScreen') || invokeFieldOrMethod(document,'IsFullScreen') || document.IsFullScreen)
+			{
+				exitFullscreen();
+			}
+		},5*1000);
+	},false);
+
+</script>
+</html>

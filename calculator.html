@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GOTHEMRIGHT!-Calculator</title>
+	<link rel="stylesheet" href="font/css/font-awesome.min.css">
+	<style>
+		*{margin: 0;padding: 0;}
+		/*body{background: url('img/back5.jpg') no-repeat center;background-size: cover;filter: gray;}*/
+		body{
+			background-color: #FFF7D5;
+			position: relative;
+		}
+		header{height: 60px;width: 100%;background: rgba(0,0,0,0.5);}
+		header ul{width: 100%;height: 60px;flex-direction: row;display: flex;justify-content: center;}
+		header ul li{height: 60px;list-style: none;padding: 0 26px;}
+		header ul li a{display: inline-block; height: 60px;width: 100%;color: #fff;font-size: 18px;text-align: center;text-decoration: none;line-height: 60px;text-shadow:  0 0 20px #333;}
+		header ul li a i{margin: 10px;}
+		header ul li:hover{background: rgba(0,0,0,0.5);cursor: pointer;}
+		footer{
+            height:60px;
+            line-height: 60px;
+			background: rgba(0,0,0,0.5);
+            color: white;
+            width:100%;
+			text-align: center;
+        }
+        footer span{margin-left: 20px;}
+        #mybody h1{color: #fff;text-align: center;padding: 25px auto;text-shadow: 0 0 20px #000;font-size: 60px;font-family: SimHei}
+        #mybody{min-height: 600px;width: 100%;box-sizing: border-box;padding: 50px 0;}
+        #mybody>div{width: 100%;font-size: 14px;text-align: center;}
+        #mybody h2{text-align: center;margin: 20px auto;color: #eee;text-shadow: 0 0 20px #000;}
+        .left .form{width: 100%;padding: 30px 10px;box-sizing: border-box;}
+        .left .form table{width: 100%;}
+        .left .form table input{width: 70px;height: 30px;border:1px solid #ccc;padding-left: 5px;}
+        .BG555{background: #333;}
+        .right{padding: 30px 30px;box-sizing: border-box;border-left: 2px solid #fff;height: 600px;}
+        .right>div{margin: 5px auto;}
+        .right>div input{width: 100px;height: 30px;border:1px solid #ccc;padding-left: 5px;}
+        .col-xs-8{width: 60%;float: left;height: 40px;}
+        .col-xs-4{width: 38%;float: left;height: 40px;}
+        hr{border: 1px solid #fff;}
+        .col-sm-6{width: 50%;float: left;}
+        .bold{width: 100%;height: 35px;font-weight: bold;float: left;line-height: 35px;}
+		#resultBtn{
+			padding:2px 5px;
+			font-size: 20px;
+		}
+		#secondbtn{width: 100px;height: 40px;background: rgba(0,0,0,0.7);border:1px solid #eee;color: #fff;margin-top: 10px;}
+		table{text-align: center;}
+	</style>
+</head>
+<body>
+	<header>
+		<ul>
+			<li><a href="home.html"><i class="fa fa-university" aria-hidden="true"></i>Home</a></li>
+			<li><a href="index.html"><i class="fa fa-line-chart" aria-hidden="true"></i>Index</a></li>
+			<li><a href="equity.html"><i class="fa fa-usd" aria-hidden="true"></i>Equity</a></li>
+			<li><a href="fixed.html"><i class="fa fa-btc" aria-hidden="true"></i>Fixed</a></li>
+			<li><a href="derivatives.html"><i class="fa fa-ils" aria-hidden="true"></i>Derivatives</a></li>
+			<li><a href="calculator.html"><i class="fa fa-calculator" aria-hidden="true"></i>Calculator</a></li>
+			<!-- <li><a href="javascript:;"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back</a></li> -->
+		</ul>
+	</header>
+	<div id="mybody">
+		<h1>CALCULATOR</h1>
+		<div class="left">
+			<h2>(ROE) Return on Equity calculator</h2>
+			<div id="dupont" name="dupont" class="form">
+				<div>
+					<table class="dupont-analysis" align="center" border="0" cellspacing="3" cellpadding="0">
+						<tr><td colspan="7"><p>DuPont analysis is an expression which breaks ROE (Return On Equity) into three parts: 1. Operating efficiency, 2. Asset use efficiency, 3. Financial leverage.	</p></td></tr>
+						<tr><td align="right" colspan="7"><hr/></td></tr>
+						<tr>
+							<td valign="bottom" class="R">Net income</td>
+							<td rowspan="5" align="center" valign="middle"> <p class="html-operator" style="padding-top: 15px" >&nbsp;&#215;&nbsp;</p> </td>
+							<td valign="bottom" class="R">Net Sales</td>
+							<td rowspan="5" align="center" valign="middle"> <p class="html-operator" style="padding-top: 15px" >&nbsp;&#215;&nbsp;</p> </td>
+							<td valign="bottom" class="R">Total Assets</td>
+							<td rowspan="5" align="center" valign="middle"> <p><button id="resultBtn">=</button></p> </td>
+							<td class="R">Return on Equity (ROE)</td>
+						</tr>
+						<tr>
+							<td class="R"><input class="vis biginput R W120-75 ni" type="text" maxlength="9" id="top1" value="" /></td>
+							<td class="R"><input class="disabled vis biginput R W120-75 ns2" type="text"  id="top2" value=""   /></td>
+							<td class="R"><input class="disabled vis biginput R W120-75 ta2" type="text"  id="top3" value=""   /></td>
+							<td rowspan="3" class="R" valign="middle"><p class="html-result"><input class="disabled vis biginput R W90-60 roe" type="text" name="roe" id="result" value="" />&nbsp;%</p></td>
+						</tr>
+						<tr>
+							<td class="BG555" height="1"></td>
+							<td class="BG555" height="1"></td>
+							<td class="BG555" height="1"></td>
+						</tr>
+						<tr>
+							<td class="R"><input class="vis biginput R W120-75 ns1" type="text" maxlength="9"  id="bottom1" value=""   /></td>
+							<td class="R"><input class="vis biginput R W120-75 ta1" type="text" maxlength="9"  id="bottom2" value=""   /></td>
+							<td class="R"><input class="vis biginput R W120-75 eq" type="text" maxlength="9"  id="bottom3" value=""  /></td>
+						</tr>
+						<tr>
+							<td valign="top" class="R">Net Sales</td>
+							<td valign="top" class="R">Total Assets</td>
+							<td valign="top" class="R">Total equity</td>
+							<td></td>
+						</tr>
+						<tr><td align="right" colspan="7"><hr/></td></tr>
+						<tr>
+							<td class="R"><b>Profit Margin</b></td>
+							<td></td>
+							<td class="R"><b>Total Asset Turnover</b></td>
+							<td></td>
+							<td class="R"><b>Financial Leverage</b></td>
+							<td></td>
+							<td class="R"><b>ROE</b></td>
+						</tr>
+						<tr>
+							<td class="R"><span class="r1 html-result" type="text" id="r1">0.27</span></td>
+							<td align="center" valign="middle"><p class="html-operator">&nbsp;&#215;&nbsp;</p></td>
+							<td class="R"><span class="r2 html-result" type="text" id="r2">0.16</span></td>
+							<td align="center" valign="middle"><p class="html-operator">&nbsp;&#215;&nbsp;</p></td>
+							<td class="R"><span class="r3 html-result" type="text" id="r3">2.06</span></td>
+							<td align="center" valign="middle"> <p class="html-operator">&nbsp;=</p> </td>
+							<td class="R"><span class="roe html-result" type="text" >8.65</span><span class="html-result"> %</span></td>
+						</tr>
+						<tr><td align="right" colspan="7"><hr/></td></tr>
+						<tr>
+							<td width="22%" valign="top" class="R"><b>Profit Margin</b></td>
+							<td></td>
+							<td width="22%" valign="top" class="R"><b>Total Asset Turnover</b></td>
+							<td></td>
+							<td width="22%" valign="top" class="R"></td>
+							<td></td>
+							<td width="22%" valign="top" class="R"><b>ROA</b></td>
+						</tr>
+						<tr>
+							<td class="R"><span class="r1 html-result" type="text" >0.27</span></td>
+							<td align="center" valign="middle"><p class="html-operator">&nbsp;&#215;&nbsp;</p></td>
+							<td class="R"><span class="r2 html-result" type="text" >0.16</span></td>
+							<td class="R" valign="middle"></td>
+							<td class="R"></td>
+							<td align="center" valign="middle"><p class="html-operator">&nbsp;=</p> </td>
+							<td class="R html-result"><p class="html-result"><span class="roa html-result" type="text" id="roa">4.19</span><span class="html-result"> %</span><p></td>
+						</tr>
+						<tr><td align="right" colspan="7"><hr/></td></tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="right">
+			<h2>Financial Ratios</h2>
+			<div class="col-sm-6">
+				<div class="col-xs-8">Current Assets</div>
+				<div class="col-xs-4"><input id="CurrentAssets" type="text" value="" placeholder="0.00"/></div>
+				<div class="bold">incl.</div>
+				<div class="col-xs-8">- Cash and equivalents</div>
+				<div class="col-xs-4"><input id="Cash" type="text" value="" placeholder="0.00"/></div>
+				<div class="col-xs-8">- Marketable securities</div>
+				<div class="col-xs-4"><input id="MarketableSecurities" type="text" value="" placeholder="0.00"/></div>
+				<div class="col-xs-8">- Inventories</div>
+				<div class="col-xs-4"><input id="Inventory" type="text" value="" placeholder="0.00"/></div>
+				<div class="col-xs-8">Fixed Assets</div>
+				<div class="col-xs-4"><input id="FixedAssets" type="text" value="" placeholder="0.00"/></div>
+				<div class="col-xs-8">Total Assets</div>
+				<div class="col-xs-4"><input id="Assets" type="text" value="" placeholder="0.00"/></div>
+				<div class="col-xs-8">Current Liabilities</div>
+				<div class="col-xs-4"><input id="CurrentLiabilities" type="text" value="" placeholder="0.00"/></div>
+				<div class="col-xs-8">Total debt</div>
+				<div class="col-xs-4"><input id="Debt" type="text" value="" placeholder="0.00"/></div>
+				<div class="col-xs-8">Total equity</div>
+				<div class="col-xs-4"><input id="Equity" type="text" value="" placeholder="0.00"/></div>
+				<div class="col-xs-8">Net Sales</div>
+				<div class="col-xs-4"><input id="NetSales" type="text" value="" placeholder="0.00"/></div>
+				<div class="col-xs-8">Operating Income</div>
+				<div class="col-xs-4"><input id="OperatingIncome" type="text" value="" placeholder="0.00"/></div>
+				<div class="col-xs-8">Net income</div>
+				<div class="col-xs-4"><input id="NetIncome" type="text" value="" placeholder="0.00"/></div>
+			</div>
+			<div class="col-sm-6">
+			    <div class="bold"><div>Profitability Ratios</div></div>
+			    <div>
+				    <div class="col-xs-8"><div id="help1-title">Operating Margin:</div></div>
+				    <div class="col-xs-4"><input id="OperatingMargin" readonly="readonly" value="" placeholder="-"/></div>
+			    </div>
+			    <div>
+				    <div class="col-xs-8"><div id="help2-title">Profit Margin:</div></div>
+				    <div class="col-xs-4"><input id="ProfitMargin" readonly="readonly" value="" placeholder="-"/></div>
+			    </div>
+			    <div>
+				    <div class="col-xs-8"><div id="help10-title">Return on Assets (ROA):</div></div>
+				    <div class="col-xs-4"><input id="ROA" readonly="readonly" value="" placeholder="-"/></div>
+			    </div>
+			    <div>
+				    <div class="col-xs-8"><div id="help11-title">Return on Equity (ROE):</div></div>
+				    <div class="col-xs-4"><input id="ROE" readonly="readonly" value="" placeholder="-"/></div>
+			    </div>
+			    <div >
+				    <div class="col-xs-8"><div id="help3-title">Fixed Asset Turnover:</div></div>
+				    <div class="col-xs-4"><input id="FixedAssetTurnover" readonly="readonly" value="" placeholder="-"/></div>
+			    </div>
+			    <div>
+				    <div class="col-xs-8"><div id="help4-title">Total Asset Turnover:</div></div>
+				    <div class="col-xs-4"><input id="AssetTurnover" readonly="readonly" value="" placeholder="-"/></div>
+			    </div>
+			    <div class="bold"><div>Liquidity Ratios</div></div>
+			    <div>
+				    <div class="col-xs-8"><div id="help5-title">Current Ratio:</div></div>
+				    <div class="col-xs-4"><input id="CurrentRatio" readonly="readonly" value="" placeholder="-"/></div>
+			    </div>
+			    <div>
+				    <div class="col-xs-8"><div id="help6-title">Quick Ratio or Acid-test Ratio:</div></div>
+				    <div class="col-xs-4"><input id="QuickRatio" readonly="readonly" value="" placeholder="-"/></div>
+			    </div>
+			    <div>
+				    <div class="col-xs-8"><div id="help7-title">Cash Ratio:</div></div>
+				    <div class="col-xs-4"><input id="AcidTestRatio" readonly="readonly" value="" placeholder="-"/></div>
+			    </div>
+			    <div class="bold"><div>Debt Ratios</div></div>
+			    <div>
+				    <div class="col-xs-8"><div id="help8-title">Debt to Equity (D/E):</div></div>
+				    <div class="col-xs-4"><input id="DebtToEquity" readonly="readonly" value="" placeholder="-"/></div>
+			    </div>
+			    <div>
+				    <div class="col-xs-8"><div id="help9-title">Debt to Assets (D/A):</div></div>
+				    <div class="col-xs-4"><input id="DebtToAssets" readonly="readonly" value="" placeholder="-"/></div>
+			    </div>
+			</div>
+		</div>
+		<div><button id="secondbtn">Calculate</button></p></div>
+	</div>
+	<footer>
+	    <span>Statement: This website is for project use, contact me via zy324@drexel.edu</span>
+            <span>CS530: Developing User Interfaces &copy; 2018</span>
+	</footer>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+	$('#resultBtn').click(function () {
+		var top = parseFloat($('#top1').val()) * parseFloat($('#top2').val()) *parseFloat($('#top3').val());
+		var bottom = parseFloat($('#bottom1').val()) * parseFloat($('#bottom2').val()) * parseFloat($('#bottom3').val());
+		$('#result').val( top / bottom );
+	})
+	$('#secondbtn').click(function () {
+		financialsCalc();
+	})
+	Round2 = function (flVal,field){
+	  	var t,a, res,flValue, flValue2;
+	  	if (!isNaN(flVal)){    
+		    flValue = parseFloat(flVal)*100;
+		    flValue2 = (parseFloat(flVal)*100)%100;
+		    t = Math.round((parseFloat(flVal)*100)%100);    
+		    a = flVal - (parseFloat(flVal)%1);
+		    if(t == 100){
+		    	t = 0;
+		    	a++;
+		    }
+		    if (t < 10) t = "0"+t;
+		    if (isNaN(a)) a = 0;
+		    if (isNaN(t)) t = 0;
+		    res = String (a + "." + t);
+		    return res;
+		} else {
+		    return "-";
+		}
+	}
+
+	function financialsCalc() {
+		var NetSales		= parseFloat(document.getElementById("NetSales").value.replace("\,","."));
+		var OperatingIncome	= parseFloat(document.getElementById("OperatingIncome").value.replace("\,","."));
+		var NetIncome		= parseFloat(document.getElementById("NetIncome").value.replace("\,","."));
+		var CurrentAssets	= parseFloat(document.getElementById("CurrentAssets").value.replace("\,","."));
+		var Cash			= parseFloat(document.getElementById("Cash").value.replace("\,","."));
+		var MarketableSecurities = parseFloat(document.getElementById("MarketableSecurities").value.replace("\,","."));
+		var Inventory		= parseFloat(document.getElementById("Inventory").value.replace("\,","."));
+		var FixedAssets		= parseFloat(document.getElementById("FixedAssets").value.replace("\,","."));
+		var Assets			= parseFloat(document.getElementById("Assets").value.replace("\,","."));
+		var CurrentLiabilities	= parseFloat(document.getElementById("CurrentLiabilities").value.replace("\,","."));
+		var Debt			= parseFloat(document.getElementById("Debt").value.replace("\,","."));
+		var Equity			= parseFloat(document.getElementById("Equity").value.replace("\,","."));
+		var OperatingMargin	= document.getElementById("OperatingMargin");
+		var ProfitMargin	= document.getElementById("ProfitMargin");
+		var FixedAssetTurnover	= document.getElementById("FixedAssetTurnover");
+		var AssetTurnover	= document.getElementById("AssetTurnover");
+		var CurrentRatio	= document.getElementById("CurrentRatio");
+		var QuickRatio		= document.getElementById("QuickRatio");
+		var AcidTestRatio	= document.getElementById("AcidTestRatio");
+		var DebtToEquity	= document.getElementById("DebtToEquity");
+		var DebtToAssets	= document.getElementById("DebtToAssets");
+		var ROE				= document.getElementById("ROE");
+		var ROA				= document.getElementById("ROA");
+
+		OperatingMargin.value = Round2(OperatingIncome / NetSales);
+		ProfitMargin.value = Round2(NetIncome / NetSales);
+		FixedAssetTurnover.value = Round2(NetSales / FixedAssets);
+		AssetTurnover.value = Round2(NetSales / Assets);
+		AcidTestRatio.value = Round2((Cash + MarketableSecurities) / CurrentLiabilities);
+		CurrentRatio.value = Round2(CurrentAssets / CurrentLiabilities);
+		QuickRatio.value = Round2((CurrentAssets - Inventory) / CurrentLiabilities);
+		DebtToEquity.value = Round2(Debt / Equity);
+		DebtToAssets.value = Round2(Debt / Assets);
+		ROA.value = Round2(NetIncome / Assets);
+		ROE.value = Round2(NetIncome / Equity);
+
+	}
+</script>
+</html>

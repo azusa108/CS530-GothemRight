@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GOTHEMRIGHT!-Index</title>
+	<link rel="stylesheet" href="font/css/font-awesome.min.css">
+	<style>
+		*{margin: 0;padding: 0;}
+		/*body{background: url('img/back1.jpg');}*/
+		body{
+			background-color: #FFF7D5;
+			position: relative;
+		}
+		header{height: 60px;width: 100%;background: rgb(66,118,161);}
+		header ul{width: 100%;height: 60px;flex-direction: row;display: flex;justify-content: center;}
+		header ul li{height: 60px;list-style: none;padding: 0 26px;}
+		header ul li a{display: inline-block; height: 60px;width: 100%;color: #fff;font-size: 18px;text-align: center;text-decoration: none;line-height: 60px;text-shadow:  0 0 20px #333;}
+		header ul li a i{margin: 10px;}
+		header ul li:hover{background: rgba(0,0,0,0.5);cursor: pointer;}
+		footer{
+            height:60px;
+            line-height: 60px;
+			background: rgba(0,0,0,0.8);
+            color: white;
+            width:100%;
+			text-align: center;
+			float: left;
+        }
+        footer span{margin-left: 20px;}
+        #mybody{height: 600px;width: 100%;box-sizing: border-box;}
+        .index_body{height: 400px;background: rgba(0,0,0,.3);}
+        .index_body>div{width: 50%;float: left;height: 400px;}
+        .index_body div h4{ background: rgba(53,94,145,0.7);color: #fff;font-size: 16px;border-radius: 15px;width: 60%;margin: 40px 20%;height: 40px;line-height: 40px;text-align: center;text-shadow:  0 0 20px #333;}
+        .index_body div h4 a{text-decoration: none;color: #fff;}
+        .index_body div p{color: #333;width: 80%;margin-left: 10%;}
+        .index_body div select{width: 60%;background: #fff;color: #333;font-size: 16px;margin-top: 30px;height: 30px;line-height: 30px;margin-left: 12%;}
+        .index_img{width: 100%;background-size: 100%;height: 500px;padding:  0;box-sizing: border-box;filter: grayscale(10%);}
+        .index_img h2{text-align: center;color:#fff;font-size: 60px;text-shadow: 0 0 20px #000;background: rgba(0,0,0,.2);}
+        .index_img h1{color: #fff;text-align: center;margin: 25px auto;text-shadow: 0 0 20px #000;font-size: 60px;margin-top: -400px;font-family: SimHei}
+        .index_sure{width: 60px;height: 30px;background: transparent;margin-top: 30px;display:inline-block;border-radius: 13px;border:1px solid rgba(53,94,145,0.7);color: rgba(53,94,145,0.7);background: #fff;transition: 0.5s all;text-align: center;line-height: 30px;cursor: pointer;text-decoration: none;line-height: 30px;font-size: 13px;}
+        .index_sure:hover{background: rgba(53,94,145,0.8);color: #fff;text-shadow: 0 0 30px #000;}
+		.imgDiv{
+			width:100%;
+			height:500px;
+			float: left;
+			overflow: hidden;
+		}
+		.imgDiv img{
+			width:100%;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<ul>
+			<li><a href="home.html"><i class="fa fa-university" aria-hidden="true"></i>Home</a></li>
+			<li><a href="index.html"><i class="fa fa-line-chart" aria-hidden="true"></i>Index</a></li>
+			<li><a href="equity.html"><i class="fa fa-usd" aria-hidden="true"></i>Equity</a></li>
+			<li><a href="fixed.html"><i class="fa fa-btc" aria-hidden="true"></i>Fixed</a></li>
+			<li><a href="derivatives.html"><i class="fa fa-ils" aria-hidden="true"></i>Derivatives</a></li>
+			<li><a href="calculator.html"><i class="fa fa-calculator" aria-hidden="true"></i>Calculator</a></li>
+		</ul>
+	</header>
+	<div id="mybody">
+		<div class="index_img">
+			<div class="imgDiv">
+				<img id="index" src="img3/ox.jpg" alt="">
+				<h1 class="h1">INDEX</h1>
+			</div>
+			<div class="index_body">
+				<div class="left_body">
+					<h4><a href="https://www.nasdaq.com/investing/glossary/d/domestic-market">Domestic Market US Only</a></h4>
+					<p>Select the Index you want to follow and click the comfirm button</p>
+					<select name="usselect" id="usselect">
+						<option value="https://www.nasdaq.com/markets/indices/major-indices.aspx">Domestic Index</option>
+						<option value="https://finance.yahoo.com/quote/%5EGSPC?p=^GSPC">SP 500</option>
+						<option value="https://finance.yahoo.com/quote/%5EDJI?p=^DJI">Dow Jones 30</option>
+						<option value="https://finance.yahoo.com/quote/%5ERUT?p=^RUT">Russell 2000</option>
+						<option value="https://finance.yahoo.com/quote/%5EIXIC?p=^IXIC">NaSDAQ</option>
+					</select>
+					<a href="#" id="firstsure" class="index_sure">Confirm</a>
+				</div>
+				<div class="right_body">
+					<h4><a href="http://money.cnn.com/data/world_markets/americas/">Global Market Universal</a></h4>
+					<p>Select the Index you want to follow and click the comfirm button</p>
+					<select name="usselect" id="usselect2">
+						<option value="https://www.nasdaq.com/markets/global-indices.aspx">Global Index</option>
+						<option value="https://finance.yahoo.com/quote/CL=F?p=CL=F">Crude Oil</option>
+						<option value="https://finance.yahoo.com/quote/GC=F?p=GC=F">Gold</option>
+						<option value="https://finance.yahoo.com/quote/EURUSD=X?p=EURUSD=X">EUR/USD</option>
+						<option value="https://finance.yahoo.com/quote/GBPUSD=X?p=GBPUSD=X">GBP/USD</option>
+					</select>
+					<a href="#" id="secondsure" class="index_sure">Confirm</a>
+				</div>
+			</div>
+			<footer>
+				<span>Statement: This website is for project use, contact me via zy324@drexel.edu</span>
+				<span>CS530: Developing User Interfaces &copy; 2018</span>
+			</footer>
+		</div>
+	</div>
+
+</body>
+<script>
+	var firstsure = document.getElementById("firstsure");
+	var secondsure = document.getElementById("secondsure");
+	firstsure.onclick = function(){
+		var selected_val = document.getElementById('usselect').value;
+		window.location.href=selected_val;
+	}
+	secondsure.onclick = function(){
+		var selected_val = document.getElementById('usselect2').value;
+		window.location.href=selected_val;
+	}
+</script>
+</html>

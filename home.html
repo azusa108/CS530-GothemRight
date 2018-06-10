@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GOTHEMRIGHT!</title>
+	<link rel="stylesheet" href="font/css/font-awesome.min.css">
+	<style>
+		*{margin: 0; padding: 0;}
+		body{background: url('img3/nature.jpg');}
+		header{height: 60px; width: 100%; background: rgba(0,0,0,0.5);}
+		header ul{width: 100%; height: 60px; flex-direction: row; display: flex; justify-content: center;}
+		header ul li{height: 60px; list-style: none;padding: 0 26px;}
+		header ul li a{display: inline-block; height: 60px; width: 100%; color: #fff; font-size: 18px; text-align: center; text-decoration: none; line-height: 60px;}
+		header ul li a i{margin: 10px;}
+		header ul li:hover{background: rgba(0,0,0,0.5); cursor: pointer;}
+		footer{
+            height:60px;
+            line-height: 60px;
+			background: rgba(0,0,0,0.8);
+            color: white;
+            width:100%;
+            margin:0 auto;
+			text-align: center;
+        }
+        footer span{margin-left: 20px;}
+        #mybody{min-height: 500px;width: 100%;margin: 0 auto;box-sizing: border-box;}
+        .home_img{width: 100%;background-size: 100%;height: 500px;padding: 50px;box-sizing: border-box;filter: grayscale(50%);}
+        .home_img h1{color: #fff;text-align: center;margin: 25px auto;text-shadow: 0 0 20px #000;font-size: 60px;font-family: SimHei}
+        .home_img h2{color: #ccc;text-align: center;margin: 15px auto;text-shadow: 0 0 20px #000;font-size: 38px;}
+        .home_img h3{color: #fff;text-align: center;margin: 15px auto;font-size: 28px;text-shadow: 0 0 30px #000;}
+        .my_search{width: 1000px;position: absolute;height:60px;top: 500px;left: 50%;background: rgba(0,0,0,.4);margin-left: -500px;}
+        .my_search input{display: inline-block;width: 300px;height: 40px;border:1px solid #ccc;border-radius: 13px;position: absolute;left: 50%;margin-left: -150px;top: 10px;padding-left: 40px;}
+        .my_search i:first-child{position: absolute;left: 50%;margin-left: -140px;top: 22px;z-index: 1;}
+        .my_search button{position: absolute;left: 50%;margin-left: 230px;top: 50%;font-size: 14px;margin-top: -20px;color: #fff;height: 40px;width: 80px;border:1px solid #fff;background: rgba(0,0,0,0.7);border-radius: 13px;line-height: 40px;}
+	</style>
+</head>
+<body>
+	<header>
+		<ul>
+			<li><a href="home.html"><i class="fa fa-university" aria-hidden="true"></i>Home</a></li>
+			<li><a href="index.html"><i class="fa fa-line-chart" aria-hidden="true"></i>Index</a></li>
+			<li><a href="equity.html"><i class="fa fa-usd" aria-hidden="true"></i>Equity</a></li>
+			<li><a href="fixed.html"><i class="fa fa-btc" aria-hidden="true"></i>Fixed</a></li>
+			<li><a href="derivatives.html"><i class="fa fa-ils" aria-hidden="true"></i>Derivatives</a></li>
+			<li><a href="calculator.html"><i class="fa fa-calculator" aria-hidden="true"></i>Calculator</a></li>
+		</ul>
+	</header>
+	<div id="mybody">
+		<div class="home_img">
+			<h1>GOTHEMRIGHT!</h1>
+			<h2>Welcome You!</h2>
+			<h3>Practical, Educational, Simple</h3>
+			<h2>Specific for Finance students</h2>
+			<h3>Index Follow-Study-Calculator</h3>
+			<h3>The best platform for finance study!</h>
+		</div>
+		<div class="my_search">
+			<i class="fa fa-search" aria-hidden="true"></i>
+			<input type="text" class="search_input" placeholder="search">
+			<button>Got it!</button>
+		</div>
+	</div>
+	<footer>
+	    <span>Statement: This website is for project use, contact me via zy324@drexel.edu</span>
+	    <span>CS530: Developing User Interfaces &copy; 2018</span>
+	</footer>
+</body>
+</html>

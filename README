@@ -1,0 +1,50 @@
+
+	     README FOR GOTHEMRIGHT! APPLICATION!
+
+		        ZIXUAN YUAN
+		     Drexel University	
+		     zy324@drexel.edu
+-------------------------------------------------------------------
+
+
+This document briefly illustrate the basic functions for the files
+in the directory and some extra informations about the application.
+
+GOTHEMRIGHT is the project specific for the use of the CS530 2018.
+
+To Run, visit the URL below: 
+	
+	https://www.cs.drexel.edu/~zy324/cs530/project-v3/home.html
+
+-------------------------------------------------------------------
+
+1. Font Directory:
+    This directory contains the style files for the application in
+-cluding the fonts and the .css, which could make the interface be
+more variable and beautiful to the users.
+The contains are supported by the fontawesome.com with version 4.2
+The IE-7 solustion open code are supported by the ThinkCMF.com from
+China.
+
+2. img/img2/img3 Directory:
+    This sort of directory include image used as the background and
+the number is different for the style changed during the implementa
+-ion procedures.
+
+3. movie/video files:
+    This type of files are used by the studying sections and due to 
+the lack of material source, I temporally put them outside of the 
+directory even though they should be in.
+
+4. html files:
+    This type of files are the core codes files for the application
+including the design for the menu, the background, links and the ov
+-erall arrangement of the application.
+    To specific, the algorithms for the calculators are supported by
+the open source code in github and the CFA institute.
+
+5. JS Directory:
+    This directory also contains the files for styling no matter it
+is JQuerry or Javascripts.
+
+Finally, Thanks for professor Erin Solovey and her supports!
